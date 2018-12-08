@@ -6,7 +6,7 @@ import Jumbotron from './Jumbotron';
 class Home extends Component {
   render() {
     return(
-      <React.Fragment>
+      <div className="page">
         <Jumbotron title="Prop Heading" subtitle="Subtitle Prop" />
         <div className="container">
 
@@ -53,7 +53,7 @@ class Home extends Component {
             Etiam facilisis tempor justo vel aliquet. 
             Quisque ligula metus, mollis vitae euismod eu, molestie elementum metus.</p>
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+p {
+  padding: 1rem;
+}
+
+/* Select the last paragraph of the .page div  */
+.page > div > p:last-child {
+  padding-bottom: 5rem;
+}
