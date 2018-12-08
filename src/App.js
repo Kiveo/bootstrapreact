@@ -11,7 +11,6 @@ class App extends Component {
     return (
       <Router>
         <div>
-          {/* <Navbar2 /> */}
           <Navbar />
 
           <Switch>
