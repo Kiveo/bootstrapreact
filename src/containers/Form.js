@@ -11,9 +11,9 @@ class Form extends Component {
   }
 
   handleSubmit = (event) => {
+    event.preventDefault();
     console.log("ping!");
     if (event.target.checkValidity() === false) {
-      event.preventDefault();
       event.stopPropagation();
     }
     event.target.classList.add('was-validated');
@@ -31,6 +31,7 @@ class Form extends Component {
     return(
       <form className="needs-validation" noValidate onSubmit={this.handleSubmit}>
         <div className="form-row">
+          {/* Each column of this row has a label, input, and tooltip validation */}
           <div className="col-md-4 mb-3">
             <label htmlFor="validationTooltip01">First name</label>
             <input type="text" className="form-control" id="validationTooltip01" placeholder="First name" name="firstName" onChange={this.handleChange} value={this.state.firstName} required />
@@ -40,7 +41,7 @@ class Form extends Component {
           </div>
           <div className="col-md-4 mb-3">
             <label htmlFor="validationTooltip02">Last name</label>
-            <input type="text" className="form-control" id="validationTooltip02" placeholder="Last name" name="lastName" onChange={this.handleChange} value={this.state.lastName} />
+            <input type="text" className="form-control" id="validationTooltip02" placeholder="Last name" name="lastName" onChange={this.handleChange} value={this.state.lastName} required />
             <div className="valid-tooltip">
               Looks good!
             </div>
@@ -48,7 +49,7 @@ class Form extends Component {
           <div className="col-md-4 mb-3">
             <label htmlFor="validationTooltipUsername">Email</label>
             <div className="input-group">
-              <input type="email" className="form-control" id="validationTooltipUsername" placeholder="name@email.com" name="email" onChange={this.handleChange} value={this.state.email} aria-describedby="validationTooltipUsernamePrepend" />
+              <input type="email" className="form-control" id="validationTooltipUsername" placeholder="name@email.com" name="email" onChange={this.handleChange} value={this.state.email} aria-describedby="validationTooltipUsernamePrepend" required />
               <div className="invalid-tooltip">
                 Please enter a unique and valid email.
               </div>
@@ -56,6 +57,7 @@ class Form extends Component {
           </div>
         </div>
         <div className="form-row">
+          {/* Each column of this row has a label, input, and tooltip validation */}
           <div className="col-md-6 mb-3">
             <label htmlFor="validationTooltip03">City</label>
             <input type="text" className="form-control" id="validationTooltip03" placeholder="City" required />
