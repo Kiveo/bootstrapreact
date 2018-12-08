@@ -1,6 +1,6 @@
 /* add body padding to compensate for fixed top navbar */
 body {
-  min-height: 75rem;
+  min-height: 30rem;
   padding-top: 4.5rem;
 }
 
