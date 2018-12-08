@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card } from './Card';
 import Jumbotron from '../containers/Jumbotron';
 
 export const About = () => {
