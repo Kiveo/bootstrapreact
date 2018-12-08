@@ -18,8 +18,13 @@ class Navbar extends Component {
             <li className="nav-item">
               <Link className="nav-link" to="/about">About</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link disabled" to="#">Disabled</Link>
+            <li className="nav-item dropdown">
+              <Link className="nav-link dropdown-toggle" to="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</Link>
+              <div className="dropdown-menu" aria-labelledby="dropdown08">
+                <Link className="dropdown-item" to="/about">About</Link>
+                <Link className="dropdown-item" to="/sample1">Sample 1</Link>
+                <Link className="dropdown-item" to="/sample2">Sample 2</Link>
+              </div>
             </li>
           </ul>
         </div>
