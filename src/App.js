@@ -7,9 +7,11 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Route exact path="/" component={Home} />
-      </Router>
+      <div>
+        <Router>
+          <Route exact path="/" component={Home} />
+        </Router>
+      </div>
     );
   }
 }
