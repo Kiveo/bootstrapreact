@@ -21,9 +21,9 @@ class Navbar extends Component {
             <li className="nav-item dropdown">
               <NavLink className="nav-link dropdown-toggle" to="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</NavLink>
               <div className="dropdown-menu" aria-labelledby="dropdown08">
-                <NavLink className="dropdown-item" to="/sample1">Sample 1</NavLink>
-                <NavLink className="dropdown-item" to="/sample2">Sample 2</NavLink>
-                <NavLink className="dropdown-item" to="/sample3">Sample 3</NavLink>
+                <NavLink className="dropdown-item" to="/form">Sample 1: Form</NavLink>
+                <NavLink className="dropdown-item" to="/modal">Sample 2:  Modal</NavLink>
+                <NavLink className="dropdown-item" to="/carousel">Sample 3: Carousel</NavLink>
               </div>
             </li>
           </ul>

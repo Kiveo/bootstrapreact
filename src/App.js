@@ -21,9 +21,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path='/about' component={About} />
-            <Route path ="/sample1" component={Sample1} />
-            <Route path ="/sample2" component={Sample2} />
-            <Route path ="/sample3" component={Sample3} />
+            <Route path ="/form" component={Sample1} />
+            <Route path ="/modal" component={Sample2} />
+            <Route path ="/carousel" component={Sample3} />
 
           </Switch>
 
