@@ -5,6 +5,7 @@ import Jumbotron from '../containers/Jumbotron';
 export const About = () => {
   return(
     <div className="page">
+      {window.scrollTo(0, 0)}
       <Jumbotron title="About Prop" subtitle="About Subtitle" />
       <div className="container">
         <div className="container">
