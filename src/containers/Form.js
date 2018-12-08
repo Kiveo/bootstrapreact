@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Form.css';
 
 class Form extends Component {
   constructor() {
@@ -12,7 +13,6 @@ class Form extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log("ping!");
     if (event.target.checkValidity() === false) {
       event.stopPropagation();
     }
@@ -23,11 +23,9 @@ class Form extends Component {
     this.setState({
       [event.target.name]: event.target.value
     })
-    console.log(this.state.value);
   }
   
   render() {
-    console.log(this.state);
     return(
       <form className="needs-validation" noValidate onSubmit={this.handleSubmit}>
         <div className="form-row">
