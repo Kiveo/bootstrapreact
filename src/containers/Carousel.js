@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import slide1 from '../images/slide1.svg';
-import slide2 from '../images/slide2.svg';
-import slide3 from '../images/slide3.svg';
 
 import './Carousel.css';
 
@@ -16,13 +13,26 @@ class Carousel extends Component {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src={slide1} alt="First slide" />
+            {/* <img className="d-block w-100" src={slide1} alt="First slide" /> */}
+            <img className="d-block w-100" src={this.props.slide1} alt="First slide" />
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Sample Page 3: Title 1</h5>
+              <p>Info 1/3</p>
+            </div>
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={slide2} alt="Second slide" />
+            <img className="d-block w-100" src={this.props.slide2} alt="Second slide" />
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Sample Page 3: Title 2</h5>
+              <p>Info 2/3</p>
+            </div>
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={slide3} alt="Third slide" />
+            <img className="d-block w-100" src={this.props.slide3} alt="Third slide" />
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Sample Page 3: Title 3</h5>
+              <p>Info: 3/3</p>
+            </div>
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
