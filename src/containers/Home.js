@@ -7,16 +7,14 @@ class Home extends Component {
   render() {
     return(
       <div className="page">
-        <Jumbotron title="Prop Heading" subtitle="Subtitle Prop" />
+        <Jumbotron title="Home Prop" subtitle="Home Subtitle" />
         <div className="container">
-
           <div className="container">
             <div className="row">
               <Card size="col-md-4" heading="Card 1" />
               <Card size="col-md-4" heading="Card 2" />
               <Card size="col-md-4" heading="Card 3" />
             </div>
-
             <hr />
           </div>
           
