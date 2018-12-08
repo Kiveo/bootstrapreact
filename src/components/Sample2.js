@@ -1,6 +1,6 @@
 import React from 'react';
 import Jumbotron from '../containers/Jumbotron';
-import Form from '../containers/Form';
+import Modal from '../containers/Modal';
 
 export const Sample2 = () => {
   return(
@@ -11,6 +11,7 @@ export const Sample2 = () => {
         <hr />
 
         <h2>Sample 2</h2>
+        <Modal />
 
       </div>
     </div>
