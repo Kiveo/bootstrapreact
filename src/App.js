@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './containers/Home';
- 
+import Navbar from './containers/Navbar';
+
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Router>
-          <Route exact path="/" component={Home} />
-        </Router>
-      </div>
+      <Router>
+        <div>
+          <Navbar />
+
+          <Switch>
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
