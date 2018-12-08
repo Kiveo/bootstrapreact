@@ -8,14 +8,12 @@ export const About = () => {
       {window.scrollTo(0, 0)}
       <Jumbotron title="About Prop" subtitle="About Subtitle" />
       <div className="container">
-        <div className="container">
-          <div className="row">
-            <Card size="col-md-4" heading="Card 1" />
-            <Card size="col-md-4" heading="Card 2" />
-            <Card size="col-md-4" heading="Card 3" />
-          </div>
-          <hr />
+        <div className="row">
+          <Card size="col-md-4" heading="Card 1" />
+          <Card size="col-md-4" heading="Card 2" />
+          <Card size="col-md-4" heading="Card 3" />
         </div>
+        <hr />
 
         <h2>Additional Info</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
