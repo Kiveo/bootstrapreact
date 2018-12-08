@@ -1,7 +1,8 @@
 /* add body padding to compensate for fixed top navbar */
 body {
   min-height: 30rem;
-  padding-top: 4.5rem;
+  /* padding adjusts for navbar and jumbotron */
+  padding-top: 3.5rem;
 }
 
 .current a {
