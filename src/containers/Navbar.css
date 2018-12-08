@@ -4,7 +4,3 @@ body {
   /* padding adjusts for navbar and jumbotron */
   padding-top: 3.5rem;
 }
-
-.current a {
-  color: green !important;
-}
