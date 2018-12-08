@@ -1,61 +1,75 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
+  constructor() {
+    super();
+    this.state= {
+      firstName: '',
+      lastName: '',
+      email: '',
+    }
+  }
+  
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+    console.log(this.state.value);
+  }
+  
   render() {
+    console.log(this.state);
     return(
-      <form class="needs-validation" novalidate>
-        <div class="form-row">
-          <div class="col-md-4 mb-3">
-            <label for="validationTooltip01">First name</label>
-            <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required />
-            <div class="valid-tooltip">
+      <form className="needs-validation" noValidate>
+        <div className="form-row">
+          <div className="col-md-4 mb-3">
+            <label htmlFor="validationTooltip01">First name</label>
+            <input type="text" className="form-control" id="validationTooltip01" placeholder="First name" name="firstName" onChange={this.handleChange} value={this.state.firstName} required />
+            <div className="valid-tooltip">
               Looks good!
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationTooltip02">Last name</label>
-            <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required />
-            <div class="valid-tooltip">
+          <div className="col-md-4 mb-3">
+            <label htmlFor="validationTooltip02">Last name</label>
+            <input type="text" className="form-control" id="validationTooltip02" placeholder="Last name" name="lastName" onChange={this.handleChange} value={this.state.lastName} />
+            <div className="valid-tooltip">
               Looks good!
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationTooltipUsername">Username</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-              </div>
-              <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required />
-              <div class="invalid-tooltip">
-                Please choose a unique and valid username.
+          <div className="col-md-4 mb-3">
+            <label htmlFor="validationTooltipUsername">Email</label>
+            <div className="input-group">
+              <input type="email" className="form-control" id="validationTooltipUsername" placeholder="name@email.com" name="email" onChange={this.handleChange} value={this.state.email} aria-describedby="validationTooltipUsernamePrepend" />
+              <div className="invalid-tooltip">
+                Please enter a unique and valid email.
               </div>
             </div>
           </div>
         </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="validationTooltip03">City</label>
-            <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required />
-            <div class="invalid-tooltip">
-              Please provide a valid city.
+        <div className="form-row">
+          <div className="col-md-6 mb-3">
+            <label htmlFor="validationTooltip03">City</label>
+            <input type="text" className="form-control" id="validationTooltip03" placeholder="City" required />
+            <div className="invalid-tooltip">
+              Please provide a valid city.  
             </div>
           </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationTooltip04">State</label>
-            <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required />
-            <div class="invalid-tooltip">
+          <div className="col-md-3 mb-3">
+            <label htmlFor="validationTooltip04">State</label>
+            <input type="text" className="form-control" id="validationTooltip04" placeholder="State" required />
+            <div className="invalid-tooltip">
               Please provide a valid state.
             </div>
           </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationTooltip05">Zip</label>
-            <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required />
-            <div class="invalid-tooltip">
+          <div className="col-md-3 mb-3">
+            <label htmlFor="validationTooltip05">Zip</label>
+            <input type="text" className="form-control" id="validationTooltip05" placeholder="Zip" required />
+            <div className="invalid-tooltip">
               Please provide a valid zip.
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" type="submit">Submit form</button>
+        <button className="btn btn-primary" type="submit">Submit form</button>
       </form>
     );
   }
