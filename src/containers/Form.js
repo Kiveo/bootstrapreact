@@ -13,10 +13,11 @@ class Form extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (event.target.checkValidity() === false) {
-      event.stopPropagation();
-    }
+    // if (event.target.checkValidity() === false) {
+    //   event.stopPropagation();
+    // }
     event.target.classList.add('was-validated');
+    // CHECK API
   }
   
   handleChange = (event) => {
